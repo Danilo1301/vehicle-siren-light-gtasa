@@ -6,8 +6,16 @@
 3. Versão **GTA 1.0 US** (Você pode [baixar aqui](http://miscellaneous-c.blogspot.com/2016/04/crack-gta-sa-v10-us-hoodlum-no-cd-fixed.html))
 
 ## Como instalar
-1. Baixe aqui
+1. [Baixe aqui](https://github.com/Danilo1301/vehicle-siren-light-gtasa/releases/download/v1.0-beta/VehicleSirenLights.zip)
 2. Arraste a pasta **modloader** para a pasta raíz do seu GTA
+
+## Como usar
+Aperte CTRL + L dentro de um veículo
+
+(O menu de edição funciona apenas no SinglePlayer)
+
+## Vídeo com exemplo
+[https://www.youtube.com/watch?v=6N7fDUZuDi4](https://www.youtube.com/watch?v=6N7fDUZuDi4)
 
 ## Bug com o OBS
 Para corrigir
