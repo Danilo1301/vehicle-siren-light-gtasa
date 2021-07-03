@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="VehicleSirenLights.cpp" />
+    <ClCompile Include="Hook.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="LightPattern.cpp" />
+    <ClCompile Include="SirenData.cpp" />
+    <ClCompile Include="VehicleInfo.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuSiren.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VehicleSirenLights.h" />
+    <ClInclude Include="Hook.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="LightPattern.h" />
+    <ClInclude Include="SirenData.h" />
+    <ClInclude Include="VehicleInfo.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuSiren.h" />
+  </ItemGroup>
+</Project>
