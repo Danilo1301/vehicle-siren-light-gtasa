@@ -1,6 +1,6 @@
 #include "pch.h"
 
-std::ofstream flog = std::ofstream("log.txt");
+//std::ofstream flog = std::ofstream("log.txt");
 
 void ShowMessageBox(const char* text)
 {
