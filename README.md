@@ -14,6 +14,8 @@ Aperte CTRL + L dentro de um veículo
 
 (O menu de edição funciona apenas no SinglePlayer)
 
+Aperte CTRL + J para ativar/desativar somente as luzes
+
 ## Vídeo com exemplo
 [https://www.youtube.com/watch?v=6N7fDUZuDi4](https://www.youtube.com/watch?v=6N7fDUZuDi4)
 
