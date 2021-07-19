@@ -14,6 +14,8 @@ float GetAngleBetweenVectors(CVector v1, CVector v2, CVector v3) {
 
 std::map<int, VehicleInfo*> VehicleInfo::m_VehicleInfos;
 
+int lastToggledLights = 0;
+
 bool VehicleInfo::HasVehicle(CVehicle* veh)
 {
 	int vehicleId = GetVehicleId(veh);
@@ -126,6 +128,26 @@ void VehicleInfo::ProccessVehicles()
 
 			//vehicleInfo->Update();
 			//update
+		}
+	}
+
+
+
+	//----
+	CVehicle* vehicle = FindPlayerVehicle(0, false);
+
+	if (vehicle)
+	{
+		if (KeyPressed(VK_LCONTROL) && KeyPressed(74) && CTimer::m_snTimeInMilliseconds - lastToggledLights > 300)
+		{
+			lastToggledLights = CTimer::m_snTimeInMilliseconds;
+
+
+			if (HasVehicle(vehicle))
+			{
+				VehicleInfo* vehicleInfo = VehicleInfo::GetVehicle(vehicle);
+				vehicleInfo->m_bEnabled = !vehicleInfo->m_bEnabled;
+			}
 		}
 	}
 }
@@ -343,7 +365,7 @@ void VehicleInfo::Render()
 			}
 			//
 
-			if (!m_Vehicle->m_nVehicleFlags.bSirenOrAlarm && !Menu::m_bMenuVisible) light.enabled = false;
+			if (!m_bEnabled && !Menu::m_bMenuVisible) light.enabled = false;
 
 			DrawLight(m_Vehicle, light);
 		}
@@ -353,6 +375,16 @@ void VehicleInfo::Render()
 void VehicleInfo::Update()
 {
 	//flog << "Updating " << m_nId << std::endl;
+
+	bool currentSirenState = m_Vehicle->m_nVehicleFlags.bSirenOrAlarm;
+	
+	if (currentSirenState != m_bPrevSirenState)
+	{
+		m_bPrevSirenState = m_Vehicle->m_nVehicleFlags.bSirenOrAlarm;
+		m_bEnabled = currentSirenState;
+	}
+
+	
 
 	UpdatePattern();
 }

@@ -27,14 +27,14 @@ int LightPatterns::GetTotalPatterns()
 
 
 
-LightPatternFrame LightPattern::AddFrame(bool leftLightState, bool rightLightState, bool middleLightState, int durationMs)
+LightPatternFrame LightPattern::AddFrame(bool leftLightState, bool middleLightState, bool rightLightState, int durationMs)
 {
 	LightPatternFrame frame;
 
 	frame.duration = durationMs;
 	frame.leftLightState = leftLightState;
-	frame.rightLightState = rightLightState;
 	frame.middleLightState = middleLightState;
+	frame.rightLightState = rightLightState;
 
 	m_Frames.push_back(frame);
 

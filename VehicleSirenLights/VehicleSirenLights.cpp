@@ -42,45 +42,44 @@ void WaitForInitEvent()
 
 void SetupPattern()
 {
+	//https://pattern-edit-helper.glitch.me/
+
 	LightPattern* pattern1 = LightPatterns::NewPattern();
-	pattern1->AddFrame(1, 0, 1, 160);
-	pattern1->AddFrame(0, 0, 0, 50);
-	pattern1->AddFrame(0, 1, 1, 160);
-	pattern1->AddFrame(0, 0, 0, 50);
+	pattern1->AddFrame(1, 0, 0, 120);
+	pattern1->AddFrame(0, 0, 0, 120);
+	pattern1->AddFrame(0, 1, 1, 120);
+	pattern1->AddFrame(0, 1, 0, 120);
 
 	LightPattern* pattern2 = LightPatterns::NewPattern();
-	pattern2->AddFrame(1, 1, 1, 60);
-	pattern2->AddFrame(0, 0, 0, 60);
-	pattern2->AddFrame(1, 1, 1, 60);
-	pattern2->AddFrame(0, 0, 0, 300);
+	pattern2->AddFrame(0, 1, 1, 70);
+	pattern2->AddFrame(1, 0, 1, 80);
+	pattern2->AddFrame(0, 1, 1, 70);
+	pattern2->AddFrame(1, 0, 1, 80);
+	pattern2->AddFrame(0, 0, 1, 70);
+	pattern2->AddFrame(1, 0, 1, 80);
+	pattern2->AddFrame(0, 0, 1, 70);
+	pattern2->AddFrame(1, 1, 0, 70);
+	pattern2->AddFrame(1, 0, 1, 80);
+	pattern2->AddFrame(1, 1, 0, 70);
+	pattern2->AddFrame(1, 0, 1, 80);
+	pattern2->AddFrame(1, 0, 0, 70);
+	pattern2->AddFrame(1, 0, 1, 80);
+	pattern2->AddFrame(1, 0, 0, 70);
 
 	LightPattern* pattern3 = LightPatterns::NewPattern();
-	pattern3->AddFrame(1, 0, 1, 60);
-	pattern3->AddFrame(0, 0, 0, 60);
-	pattern3->AddFrame(1, 0, 1, 60);
-
-	pattern3->AddFrame(0, 0, 0, 300);
-
-	pattern3->AddFrame(0, 1, 1, 60);
-	pattern3->AddFrame(0, 0, 0, 60);
-	pattern3->AddFrame(0, 1, 1, 60);
-
-	pattern3->AddFrame(0, 0, 0, 300);
+	pattern3->AddFrame(1, 0, 1, 135);
+	pattern3->AddFrame(0, 1, 0, 135);
 
 	LightPattern* pattern4 = LightPatterns::NewPattern();
-	pattern4->AddFrame(1, 0, 1, 80);
+	pattern4->AddFrame(1, 0, 1, 60);
 	pattern4->AddFrame(0, 0, 0, 60);
-	pattern4->AddFrame(1, 0, 1, 80);
+	pattern4->AddFrame(1, 0, 1, 60);
 	pattern4->AddFrame(0, 0, 0, 60);
-	pattern4->AddFrame(1, 0, 1, 80);
-
-	pattern4->AddFrame(0, 0, 0, 300);
-
-	pattern4->AddFrame(0, 1, 1, 80);
+	pattern4->AddFrame(1, 0, 1, 60);
 	pattern4->AddFrame(0, 0, 0, 60);
-	pattern4->AddFrame(0, 1, 1, 80);
+	pattern4->AddFrame(1, 0, 1, 60);
 	pattern4->AddFrame(0, 0, 0, 60);
-	pattern4->AddFrame(0, 1, 1, 80);
+	pattern4->AddFrame(0, 1, 0, 300);
 }
 
 void DisableOriginalLights()
@@ -88,58 +87,58 @@ void DisableOriginalLights()
 	//https://gtaforums.com/topic/757430-block-siren-lights-memory-address-for-it/
 
 	//0A8C: write_memory 0x70026C size 4 value 0x90909090 virtual_protect 0
-	plugin::patch::SetUInt(0x70026C, 0x90909090);
+	//plugin::patch::SetUInt(0x70026C, 0x90909090);
 
 	//0A8C : write_memory 0x700270 size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x700270, 0x90);
+	//plugin::patch::SetUChar(0x700270, 0x90);
 
 	//0A8C : write_memory 0x700271 size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x700271, 0x90);
+	//plugin::patch::SetUChar(0x700271, 0x90);
 
 	//0A8C : write_memory 0x700261 size 4 value 0x90909090 virtual_protect 0
-	plugin::patch::SetUInt(0x700261, 0x90909090);
+	//plugin::patch::SetUInt(0x700261, 0x90909090);
 
 	//0A8C : write_memory 0x700265 size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x700265, 0x90);
+	//plugin::patch::SetUChar(0x700265, 0x90);
 
 	//0A8C : write_memory 0x700266 size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x700266, 0x90);
+	//plugin::patch::SetUChar(0x700266, 0x90);
 
 	//0A8C : write_memory 0x700257 size 4 value 0x90909090 virtual_protect 0
-	plugin::patch::SetUInt(0x700257, 0x90909090);
+	//plugin::patch::SetUInt(0x700257, 0x90909090);
 
 	//0A8C : write_memory 0x70025B size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x70025B, 0x90);
+	//plugin::patch::SetUChar(0x70025B, 0x90);
 
 	//0A8C : write_memory 0x70025C size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x70025C, 0x90);
+	//plugin::patch::SetUChar(0x70025C, 0x90);
 
 	//--
 
 	//0@ = 0xC3F12C //CPointLight => RGB
-	int pointLight = 0xC3F12C;
+	//int pointLight = 0xC3F12C;
 
 	//0A8C: write_memory 0@ size 4 value 0.0 virtual_protect 0 // R
-	plugin::patch::SetUInt(pointLight, 0);
+	//plugin::patch::SetUInt(pointLight, 0);
 
 	//0@ += 4
-	pointLight += 4;
+	//pointLight += 4;
 
 	//0A8C: write_memory 0@ size 4 value 0.0 virtual_protect 0  // G
-	plugin::patch::SetUInt(pointLight, 0);
+	//plugin::patch::SetUInt(pointLight, 0);
 
 	//0@ += 4
-	pointLight += 4;
+	//pointLight += 4;
 
 	//0A8C: write_memory 2@ size 4 value 0.0 virtual_protect 0 
-	plugin::patch::SetUInt(pointLight, 0);
+	//plugin::patch::SetUInt(pointLight, 0);
 
 	//--
 
 	//NOPs the function that draws the coronnas
 	//0A8C: write_memory 0x6ABA60 size 4 value 0x90909090 virtual_protect 0
 	plugin::patch::SetUInt(0x6ABA60, 0x90909090);
-
+	
 	//0A8C: write_memory 0x6ABA64 size 1 value 0x90 virtual_protect 0
 	plugin::patch::SetUChar(0x6ABA64, 0x90);
 
@@ -147,19 +146,22 @@ void DisableOriginalLights()
 
 	//NOPs the function that checks wether the siren was activated or not
 	//0A8C: write_memory 0x6FFDFC size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x6FFDFC, 0x90);
+	//plugin::patch::SetUChar(0x6FFDFC, 0x90);
 
 	//0A8C: write_memory 0x6FFDFD size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x6FFDFD, 0x90);
+	//plugin::patch::SetUChar(0x6FFDFD, 0x90);
 
 	//0A8C: write_memory 0x6FFDFE size 1 value 0x90 virtual_protect 0
-	plugin::patch::SetUChar(0x6FFDFE, 0x90);
+	//plugin::patch::SetUChar(0x6FFDFE, 0x90);
 
 	//--
 
+
+
+	//not using
 	//NOPs the function that activates the shadow drawing under the vehicle
 	//0A8C: write_memory 0x70802D size 4 value 0x90909090 virtual_protect 0
-	//plugin::patch::SetUInt(0x70802D, 0x90909090);
+	plugin::patch::SetUInt(0x70802D, 0x90909090);
 }
 
 void Initialize(void* param)

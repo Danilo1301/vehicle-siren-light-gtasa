@@ -21,7 +21,8 @@ public:
 
 	int m_nRenderTime = 0;
 
-
+	bool m_bPrevSirenState = false;
+	bool m_bEnabled = false;
 
 	int m_nLastChangedPattern = 0;
 	int m_nCurrentPattern = 0;
